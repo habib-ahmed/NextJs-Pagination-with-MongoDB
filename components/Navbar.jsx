@@ -9,10 +9,11 @@ export default function Navbar() {
   return (
     <header className="bg-gray-200 dark:bg-gray-800 shadow">
       <div className="container mx-auto md:w-2/3 px-4 py-2 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-primary">
-          Site Title
+        <Link href="/" className="text-2xl font-bold">
+          Site <span className="text-primary">Title</span>
         </Link>
 
+        {/* Nav links */}
         <nav className="flex gap-2 text-lg font-medium">
           {navLinks.map(({ name, path }, index) => {
             const isActive = path === pathname;
